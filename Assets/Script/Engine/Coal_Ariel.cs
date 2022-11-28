@@ -4,7 +4,7 @@ using UnityEngine;
 
 //Place this script where ever the coal is going to be shovelled in the engine. Needs to be a trigger collider
 
-public class Coal : MonoBehaviour
+public class Coal_Ariel : MonoBehaviour
 {
     private float fuelAmount;    //Float variable to the Coal Level in EngineManager
     private float fuelIncrease;  //Float variable to the increase the Coal Level in EngineManager

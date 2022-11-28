@@ -16561,7 +16561,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25994
+  m_Name: pb_Mesh25692
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -79408,9 +79408,9 @@ MonoBehaviour:
   pressure:
   - {fileID: 713888634}
   coal:
-  - {fileID: 6783459710095172566}
+  - {fileID: 0}
   water:
-  - {fileID: 6783459710095172566}
+  - {fileID: 0}
   gear: {fileID: 1327679620}
   minimunCoalAmountToUse: 30
   minimunWaterAmountToUse: 30

@@ -4,7 +4,7 @@ using UnityEngine;
 
 //Place this script where ever the water is going to be poured in the engine. Needs to be a trigger collider
 
-public class Water : MonoBehaviour
+public class Water_Ariel : MonoBehaviour
 {
     private float fuelAmount;    //Float variable to the Water Level in EngineManager
     private float fuelIncrease;  //Float variable to the increase the Water Level in EngineManager

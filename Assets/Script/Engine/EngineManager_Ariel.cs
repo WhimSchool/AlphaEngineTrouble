@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EngineManager : MonoBehaviour
+public class EngineManager_Ariel : MonoBehaviour
 {
     public GameObject coalInput;             //The part of the engine the coal has to enter before being used
     public float coalLevel = 100;            //The variable that determines how much coal is left in the engine
