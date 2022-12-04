@@ -1,0 +1,1 @@
+Add The Ray interactors prefabs to the Camera Offset of the XR origin, also set the childen of the controlers to position 0 so that the hand isnt off set of the actual controller
