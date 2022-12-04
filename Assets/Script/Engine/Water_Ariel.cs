@@ -12,8 +12,8 @@ public class Water_Ariel : MonoBehaviour
     //Constantly takes the values from their respective counterparts and gives them to the new variables
     void Update()
     {
-        fuelAmount = GetComponentInParent<EngineManager>().waterLevel;
-        fuelIncrease = GetComponentInParent<EngineManager>().waterIncrease;
+        fuelAmount = GetComponentInParent<EngineManager_Ariel>().waterLevel;
+        fuelIncrease = GetComponentInParent<EngineManager_Ariel>().waterIncrease;
     }
 
     //On Trigger Collision Enter...
@@ -24,7 +24,7 @@ public class Water_Ariel : MonoBehaviour
         {
             //Increse the Water Level in EngineManger by the set variable
             fuelAmount += fuelIncrease;
-            GetComponentInParent<EngineManager>().waterLevel = fuelAmount;
+            GetComponentInParent<EngineManager_Ariel>().waterLevel = fuelAmount;
         }
     }
 }

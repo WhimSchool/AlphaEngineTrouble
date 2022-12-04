@@ -6,8 +6,8 @@ public class BoostLever : MonoBehaviour
 {
     public Progress progress;
     public Pressure[] pressure;
-    public EngineManager[] coal;
-    public EngineManager[] water;
+    public EngineManager_Ariel[] coal;
+    public EngineManager_Ariel[] water;
     public BreakGear gear;
 
     public float minimunCoalAmountToUse = 30f;
@@ -39,11 +39,11 @@ public class BoostLever : MonoBehaviour
         {
             if (z >= 15)
             {
-                foreach (EngineManager obj in coal)
+                foreach (EngineManager_Ariel obj in coal)
                 {
                     obj.coalLevel -= decreaseSpeedCoal;
                 }
-                foreach (EngineManager obj in water)
+                foreach (EngineManager_Ariel obj in water)
                 {
                     obj.waterLevel -= decreaseSpeedWater;
                 }
@@ -68,7 +68,7 @@ public class BoostLever : MonoBehaviour
 
     private bool CheckCoalLevel()
     {
-        foreach (EngineManager obj in coal)
+        foreach (EngineManager_Ariel obj in coal)
         {
             if (obj.coalLevel >= minimunCoalAmountToUse)
             {
@@ -85,7 +85,7 @@ public class BoostLever : MonoBehaviour
 
     private bool CheckWaterLevel()
     {
-        foreach (EngineManager obj in water)
+        foreach (EngineManager_Ariel obj in water)
         {
             if (obj.waterLevel >= minimunWaterAmountToUse)
             {

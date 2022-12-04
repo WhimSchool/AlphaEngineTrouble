@@ -49,8 +49,8 @@ public class Pressure : MonoBehaviour
             sPressure = 0;
 
         //Constantly get the Coal and Water levles from the EngineManger script in the Parent
-        coalLevel = GetComponentInParent<EngineManager>().coalLevel;
-        waterLevel = GetComponentInParent<EngineManager>().waterLevel;
+        coalLevel = GetComponentInParent<EngineManager_Ariel>().coalLevel;
+        waterLevel = GetComponentInParent<EngineManager_Ariel>().waterLevel;
 
         ///Coal Amount Control
         if (coalLevel >= 75 && coalLevel <= 100)

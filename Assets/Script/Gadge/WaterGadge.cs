@@ -10,7 +10,7 @@ public class WaterGadge : MonoBehaviour
 
     void Update()
     {
-        target = GetComponentInParent<EngineManager>().waterLevel;
+        target = GetComponentInParent<EngineManager_Ariel>().waterLevel;
         gadge.localRotation = Quaternion.Euler(0f, 0f, (float)target * -levelToDegrees);
     }
 }

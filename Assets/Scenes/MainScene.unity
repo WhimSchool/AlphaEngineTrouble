@@ -79408,9 +79408,9 @@ MonoBehaviour:
   pressure:
   - {fileID: 713888634}
   coal:
-  - {fileID: 0}
+  - {fileID: 6783459710095172566}
   water:
-  - {fileID: 0}
+  - {fileID: 6783459710095172566}
   gear: {fileID: 1327679620}
   minimunCoalAmountToUse: 30
   minimunWaterAmountToUse: 30

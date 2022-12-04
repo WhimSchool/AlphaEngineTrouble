@@ -12,8 +12,8 @@ public class Coal_Ariel : MonoBehaviour
     //Constantly takes the values from their respective counterparts and gives them to the new variables
     void Update()
     {
-        fuelAmount = GetComponentInParent<EngineManager>().coalLevel;
-        fuelIncrease = GetComponentInParent<EngineManager>().coalIncrease;
+        fuelAmount = GetComponentInParent<EngineManager_Ariel>().coalLevel;
+        fuelIncrease = GetComponentInParent<EngineManager_Ariel>().coalIncrease;
     }
 
     //On Collision Enter...
@@ -24,7 +24,7 @@ public class Coal_Ariel : MonoBehaviour
         {
             Destroy(other.gameObject);  //Destroy the object on collision
             fuelAmount = fuelAmount + fuelIncrease;   //Increse the Coal Level in EngineManger by the set variable
-            GetComponentInParent<EngineManager>().coalLevel = fuelAmount;
+            GetComponentInParent<EngineManager_Ariel>().coalLevel = fuelAmount;
         }
     }
 }

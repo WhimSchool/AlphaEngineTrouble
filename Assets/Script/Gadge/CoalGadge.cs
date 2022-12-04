@@ -10,7 +10,7 @@ public class CoalGadge : MonoBehaviour
 
     void Update()
     {
-        target = GetComponentInParent<EngineManager>().coalLevel;  
+        target = GetComponentInParent<EngineManager_Ariel>().coalLevel;  
         gadge.localRotation = Quaternion.Euler(0f, 0f, (float)target * -levelToDegrees);
     }
 }
