@@ -27,6 +27,11 @@ public class Pipe : MonoBehaviour
 
     public Material brokenMat;            //When the pipe breaks, the material will change to this to indicate that it's broken
 
+    public AudioSource brokenPipe;        //Plays when the pipe breaks
+    public AudioClip[] bpSounds;          //All of the sounds that can play when the pipe breaks
+    public int soundRand;
+    int i = 1;
+
     void Update()
     {
         //Checks if the pipe is active
@@ -53,6 +58,12 @@ public class Pipe : MonoBehaviour
         {
             counter = 0;
             PipeBreak();
+        }
+
+        //When the pipe is broken, it plays the sounds
+        if (broken)
+        {
+            RandomBreakSounds();
         }
 
         pressureChange = engine.GetComponent<EngineManager>().sPressureAlter;
@@ -127,6 +138,24 @@ public class Pipe : MonoBehaviour
         {
             activePipe = false;
 
+        }
+    }
+
+    //Plays a sound when the pipe breaks
+    //Needs an audio source to play from
+    void RandomBreakSounds()
+    {
+        if (engine.GetComponent<EngineManager>().sPressure > 0 && i <= 1)
+        {
+            soundRand = Random.Range(0, bpSounds.Length);
+            brokenPipe.clip = bpSounds[soundRand];
+            brokenPipe.Play();
+            i++;
+        }
+        if (engine.GetComponent<EngineManager>().sPressure <= 0)
+        {
+            brokenPipe.mute = true;
+            i = 1;
         }
     }
 }
