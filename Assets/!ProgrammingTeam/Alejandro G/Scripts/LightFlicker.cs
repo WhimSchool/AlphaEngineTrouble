@@ -41,6 +41,7 @@ public class LightFlicker : MonoBehaviour
         {
             StopCoroutine("Flicker");
             i = 0;
+            t = 0;
         }
     }
 
@@ -53,7 +54,7 @@ public class LightFlicker : MonoBehaviour
         if (rand >= minRand)
         {
             //Then it sets the speed of the flickering light and starts the IEnumerator
-            flickerSpeed = Random.Range(flickerSpeedMin, flickerSpeedMax);
+            flickerSpeed = Random.Range(flickerSpeedMax, flickerSpeedMin);
             StartCoroutine("Flicker");
         }
     }
@@ -82,7 +83,7 @@ public class LightFlicker : MonoBehaviour
             if (currentBrightness == minBrightness)
             {
                 currentBrightness = maxBrightness;
-                flickerSpeed = Random.Range(flickerSpeedMin, flickerSpeedMax);
+                flickerSpeed = Random.Range(flickerSpeedMax, flickerSpeedMin);
             }
         }
     }
